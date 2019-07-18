@@ -1,0 +1,1 @@
+alter table parkinglot add CONSTRAINT capacity check(capacity>=0);
