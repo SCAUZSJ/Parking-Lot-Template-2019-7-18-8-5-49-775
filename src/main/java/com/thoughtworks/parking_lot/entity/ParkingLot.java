@@ -1,35 +1,34 @@
 package com.thoughtworks.parking_lot.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "parkinglot")
 public class ParkingLot {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    @Column(unique = true)
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid")
+    private String id;
+    @Column(name = "name",unique = true)
     private String name;
-
+    @Column(name = "capacity")
     private int capacity;
 
+    @Column(name = "location")
     private String location;
 
     public  ParkingLot(){}
 
-    public ParkingLot(int capacity, String location) {
+    public ParkingLot(String name, int capacity, String location) {
+        this.name = name;
         this.capacity = capacity;
         this.location = location;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -53,5 +52,13 @@ public class ParkingLot {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
