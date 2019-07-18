@@ -45,4 +45,8 @@ public class ParkingLotService {
     public ParkingLot findById(String id) {
         return parkingLotRepository.findById(id).get();
     }
+
+    public ParkingLot update(ParkingLot parkingLot) {
+        return parkingLotRepository.saveAndFlush(parkingLot);
+    }
 }

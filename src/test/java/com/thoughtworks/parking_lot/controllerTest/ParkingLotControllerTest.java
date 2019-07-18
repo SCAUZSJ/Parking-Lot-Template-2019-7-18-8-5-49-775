@@ -76,6 +76,22 @@ public class ParkingLotControllerTest {
         Assertions.assertEquals(id,json.get("id"));
     }
 
+    @Test
+    public void should_return_new_parking_lots_info_when_update_info() throws  Exception {
+        //Given
+        List<ParkingLot> parkingLots = parkingLotService.findAll();
+        ParkingLot parkingLot = parkingLots.get(0);
+        parkingLot.setCapacity(1000);
+        String objectJson = new JSONObject(parkingLot).toString();
+        //when
+        String content = this.mockMvc.perform(put("/parkingLots").contentType(MediaType.APPLICATION_JSON_UTF8).content(objectJson)).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+        JSONObject json = new JSONObject(content);
+        //then
+        Assertions.assertEquals(1000,json.get("capacity"));
+    }
+
+
+
 
 
 }
