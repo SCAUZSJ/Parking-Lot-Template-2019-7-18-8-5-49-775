@@ -42,4 +42,7 @@ public class ParkingLotService {
         }
         return false;
     }
+    public ParkingLot findById(String id) {
+        return parkingLotRepository.findById(id).get();
+    }
 }

@@ -60,11 +60,20 @@ public class ParkingLotControllerTest {
         //when
         String content = this.mockMvc.perform(get("/parkingLots?page=2&pageSize=5")).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         JSONObject json = new JSONObject(content);
-
         //then
         Assertions.assertEquals(5,json.get("size"));
         Assertions.assertEquals(parkingLot.getId(),json.getJSONArray("content").getJSONObject(0).getString("id"));
-
+    }
+    @Test
+    public void should_return_parking_lots_info_when_find_parking_lot_paging_by_id() throws  Exception {
+        //Given
+        List<ParkingLot> parkingLots = parkingLotService.findAll();
+        String id = parkingLots.get(0).getId();
+        //when
+        String content = this.mockMvc.perform(get("/parkingLots/"+id)).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+        JSONObject json = new JSONObject(content);
+        //then
+        Assertions.assertEquals(id,json.get("id"));
     }
 
 
