@@ -1,0 +1,881 @@
+2019-07-18 18:57:26.401  INFO 73068 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on ZHA-ITA108-W10 with PID 73068 (D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775\out\production\classes started by ZHANGMI6 in D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775)
+2019-07-18 18:57:26.401  INFO 73068 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 18:57:28.181  INFO 73068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-18 18:57:28.197  INFO 73068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 18:57:28.213  INFO 73068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-18 18:57:28.319  INFO 73068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 18:57:28.319 DEBUG 73068 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 18:57:28.319  INFO 73068 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1878 ms
+2019-07-18 18:57:28.419 DEBUG 73068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-07-18 18:57:28.515  INFO 73068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-18 18:57:28.520 DEBUG 73068 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-07-18 18:57:28.582 DEBUG 73068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2019-07-18 18:57:28.598 DEBUG 73068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-07-18 18:57:28.598 DEBUG 73068 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-07-18 18:57:28.682 ERROR 73068 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:296) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.thoughtworks.parking_lot.ParkingLotApplication.main(ParkingLotApplication.java:10) [classes/:na]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_201]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	... 14 common frames omitted
+
+2019-07-18 18:57:28.682  INFO 73068 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-18 18:57:28.704  INFO 73068 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-18 18:57:28.706 ERROR 73068 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-07-18 18:57:28.708  INFO 73068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-18 18:57:37.062  INFO 83724 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on ZHA-ITA108-W10 with PID 83724 (D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775\out\production\classes started by ZHANGMI6 in D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775)
+2019-07-18 18:57:37.064  INFO 83724 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 18:57:38.484  INFO 83724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-18 18:57:38.518  INFO 83724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 18:57:38.518  INFO 83724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-18 18:57:38.615  INFO 83724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 18:57:38.615 DEBUG 83724 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 18:57:38.615  INFO 83724 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1520 ms
+2019-07-18 18:57:38.716 DEBUG 83724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-07-18 18:57:38.784  INFO 83724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-18 18:57:38.784 DEBUG 83724 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-07-18 18:57:38.831 DEBUG 83724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2019-07-18 18:57:38.847 DEBUG 83724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-07-18 18:57:38.847 DEBUG 83724 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-07-18 18:57:38.931 ERROR 83724 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:296) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.thoughtworks.parking_lot.ParkingLotApplication.main(ParkingLotApplication.java:10) [classes/:na]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_201]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	... 14 common frames omitted
+
+2019-07-18 18:57:38.931  INFO 83724 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-18 18:57:38.931  INFO 83724 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-18 18:57:38.931 ERROR 83724 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-07-18 18:57:38.947  INFO 83724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-18 18:57:51.376  INFO 84156 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on ZHA-ITA108-W10 with PID 84156 (D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775\out\production\classes started by ZHANGMI6 in D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775)
+2019-07-18 18:57:51.384  INFO 84156 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 18:57:52.997  INFO 84156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-18 18:57:53.029  INFO 84156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 18:57:53.029  INFO 84156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-18 18:57:53.129  INFO 84156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 18:57:53.129 DEBUG 84156 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 18:57:53.129  INFO 84156 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1713 ms
+2019-07-18 18:57:53.231 DEBUG 84156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-07-18 18:57:53.301  INFO 84156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-18 18:57:53.301 DEBUG 84156 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-07-18 18:57:53.351 DEBUG 84156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2019-07-18 18:57:53.351 DEBUG 84156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-07-18 18:57:53.367 DEBUG 84156 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-07-18 18:57:53.451  INFO 84156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-18 18:57:53.451  INFO 84156 --- [main] c.t.parking_lot.ParkingLotApplication    : Started ParkingLotApplication in 2.501 seconds (JVM running for 2.922)
+2019-07-18 18:58:04.639  INFO 84156 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-18 18:58:04.640  INFO 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-18 18:58:04.641 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-07-18 18:58:04.644 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-07-18 18:58:04.644  INFO 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-07-18 18:58:04.653 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/h2-console/login.do?jsessionid=73b71be95155138341ffbf96aa8e5d58", parameters={masked}
+2019-07-18 18:58:04.660 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-07-18 18:58:04.675 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-07-18 18:58:04.676 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2019-07-18 18:58:04.680 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error?jsessionid=73b71be95155138341ffbf96aa8e5d58", parameters={masked}
+2019-07-18 18:58:04.681 DEBUG 84156 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-18 18:58:04.696 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2019-07-18 18:58:04.701 DEBUG 84156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2019-07-18 18:58:04.735 DEBUG 84156 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2019-07-18 18:58:04.736 DEBUG 84156 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-07-18 18:58:04.752 DEBUG 84156 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-07-18 18:58:09.749 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/h2-console/login.do?jsessionid=73b71be95155138341ffbf96aa8e5d58", parameters={masked}
+2019-07-18 18:58:09.750 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-07-18 18:58:09.751 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-07-18 18:58:09.752 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2019-07-18 18:58:09.752 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error?jsessionid=73b71be95155138341ffbf96aa8e5d58", parameters={masked}
+2019-07-18 18:58:09.753 DEBUG 84156 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-18 18:58:09.754 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2019-07-18 18:58:09.754 DEBUG 84156 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2019-07-18 18:58:09.767 DEBUG 84156 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2019-07-18 18:58:09.767 DEBUG 84156 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-07-18 18:58:09.769 DEBUG 84156 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-07-18 18:58:13.723 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/h2-console", parameters={}
+2019-07-18 18:58:13.724 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-07-18 18:58:13.726 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-07-18 18:58:13.726 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2019-07-18 18:58:13.726 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2019-07-18 18:58:13.727 DEBUG 84156 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-18 18:58:13.729 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2019-07-18 18:58:13.729 DEBUG 84156 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2019-07-18 18:59:02.983 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'configurationProperties' with highest search precedence
+2019-07-18 18:59:03.033 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+2019-07-18 18:59:03.043 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletContextInitParams' with lowest search precedence
+2019-07-18 18:59:03.063 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemProperties' with lowest search precedence
+2019-07-18 18:59:03.063 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemEnvironment' with lowest search precedence
+2019-07-18 18:59:03.063 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+2019-07-18 18:59:03.103  INFO 86408 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on ZHA-ITA108-W10 with PID 86408 (D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775\out\production\classes started by ZHANGMI6 in D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775)
+2019-07-18 18:59:03.103  INFO 86408 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 18:59:03.151  INFO 86408 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74fe5c40: startup date [Thu Jul 18 18:59:03 CST 2019]; root of context hierarchy
+2019-07-18 18:59:04.983 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'defaultProperties'
+2019-07-18 18:59:05.208  INFO 86408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86cd2c75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-18 18:59:05.920  INFO 86408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-18 18:59:05.936  INFO 86408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 18:59:05.936  INFO 86408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-18 18:59:05.936  INFO 86408 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;";C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\environment\nvm;C:\Program Files\nodejs;C:\Projects\gvvmc-vva\gvvmc_vva_dom\..\dependency\instantclient_11_2;C:\WINDOWS\System32\OpenSSH\;";C:\Program Files\Java\jdk1.8.0_201\jre\bin;";C:\Program Files (x86)\Common Files\Oracle\Java\javapath;";C:\Program Files\Apache\apache-maven-3.5.3\bin;C:\Program Files\gradle\gradle-5.5-bin\gradle-5.5\bin;C:\Program Files\nodejs\;C:\Program Files\nodejs\node_global;C:\Users\zhangmi6\AppData\Local\Microsoft\WindowsApps;;D:\software\IntelliJ IDEA Community Edition 2019.1.3\bin;;C:\Users\zhangmi6\AppData\Roaming\npm;.]
+2019-07-18 18:59:06.052  INFO 86408 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 18:59:06.052 DEBUG 86408 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 18:59:06.052  INFO 86408 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2901 ms
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-18 18:59:06.799  INFO 86408 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-18 18:59:06.828 DEBUG 86408 --- [main] o.s.w.c.s.StandardServletEnvironment     : Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+2019-07-18 18:59:06.848  WARN 86408 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is java.lang.IllegalStateException: Cannot find migrations location in: [classpath:db/migration] (please add migrations or check your Flyway configuration)
+2019-07-18 18:59:06.850  INFO 86408 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-18 18:59:06.860  INFO 86408 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-18 18:59:06.860 ERROR 86408 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is java.lang.IllegalStateException: Cannot find migrations location in: [classpath:db/migration] (please add migrations or check your Flyway configuration)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.thoughtworks.parking_lot.ParkingLotApplication.main(ParkingLotApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is java.lang.IllegalStateException: Cannot find migrations location in: [classpath:db/migration] (please add migrations or check your Flyway configuration)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot find migrations location in: [classpath:db/migration] (please add migrations or check your Flyway configuration)
+	at org.springframework.util.Assert.state(Assert.java:94) ~[spring-core-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration.checkLocationExists(FlywayAutoConfiguration.java:168) ~[spring-boot-autoconfigure-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration.flyway(FlywayAutoConfiguration.java:152) ~[spring-boot-autoconfigure-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration$$EnhancerBySpringCGLIB$$6cafa15.CGLIB$flyway$0(<generated>) ~[spring-boot-autoconfigure-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration$$EnhancerBySpringCGLIB$$6cafa15$$FastClassBySpringCGLIB$$3bebe7b5.invoke(<generated>) ~[spring-boot-autoconfigure-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration$$EnhancerBySpringCGLIB$$6cafa15.flyway(<generated>) ~[spring-boot-autoconfigure-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_201]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 21 common frames omitted
+
+2019-07-18 18:59:44.825 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'configurationProperties' with highest search precedence
+2019-07-18 18:59:44.865 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+2019-07-18 18:59:44.865 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletContextInitParams' with lowest search precedence
+2019-07-18 18:59:44.865 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemProperties' with lowest search precedence
+2019-07-18 18:59:44.865 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemEnvironment' with lowest search precedence
+2019-07-18 18:59:44.865 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+2019-07-18 18:59:44.905  INFO 68988 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on ZHA-ITA108-W10 with PID 68988 (D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775\out\production\classes started by ZHANGMI6 in D:\document\JPA\Parking-Lot-Template-2019-7-18-8-5-49-775)
+2019-07-18 18:59:44.905  INFO 68988 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 18:59:44.953  INFO 68988 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74fe5c40: startup date [Thu Jul 18 18:59:44 CST 2019]; root of context hierarchy
+2019-07-18 18:59:46.145 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'defaultProperties'
+2019-07-18 18:59:46.270  INFO 68988 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2014e8f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-18 18:59:46.900  INFO 68988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-18 18:59:46.916  INFO 68988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 18:59:46.916  INFO 68988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-18 18:59:46.932  INFO 68988 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;";C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\environment\nvm;C:\Program Files\nodejs;C:\Projects\gvvmc-vva\gvvmc_vva_dom\..\dependency\instantclient_11_2;C:\WINDOWS\System32\OpenSSH\;";C:\Program Files\Java\jdk1.8.0_201\jre\bin;";C:\Program Files (x86)\Common Files\Oracle\Java\javapath;";C:\Program Files\Apache\apache-maven-3.5.3\bin;C:\Program Files\gradle\gradle-5.5-bin\gradle-5.5\bin;C:\Program Files\nodejs\;C:\Program Files\nodejs\node_global;C:\Users\zhangmi6\AppData\Local\Microsoft\WindowsApps;;D:\software\IntelliJ IDEA Community Edition 2019.1.3\bin;;C:\Users\zhangmi6\AppData\Roaming\npm;.]
+2019-07-18 18:59:47.094  INFO 68988 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 18:59:47.094 DEBUG 68988 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 18:59:47.094  INFO 68988 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2149 ms
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-18 18:59:47.770  INFO 68988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-18 18:59:47.801 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+2019-07-18 18:59:47.818  INFO 68988 --- [main] o.f.core.internal.util.VersionPrinter    : Flyway Community Edition 5.0.7 by Boxfuse
+2019-07-18 18:59:47.818  INFO 68988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-18 18:59:47.955  INFO 68988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-18 18:59:47.955  INFO 68988 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:parkinglot (H2 1.4)
+2019-07-18 18:59:48.026  INFO 68988 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.024s)
+2019-07-18 18:59:48.046  INFO 68988 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2019-07-18 18:59:48.076  INFO 68988 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2019-07-18 18:59:48.076  INFO 68988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - createTableProsecytor
+2019-07-18 18:59:48.096  INFO 68988 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.055s)
+2019-07-18 18:59:48.195  INFO 68988 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-07-18 18:59:48.572  INFO 68988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-18 18:59:48.657  INFO 68988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-18 18:59:48.879  INFO 68988 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74fe5c40: startup date [Thu Jul 18 18:59:44 CST 2019]; root of context hierarchy
+2019-07-18 18:59:48.909  WARN 68988 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-18 18:59:48.939 DEBUG 68988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking for request mappings in application context: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74fe5c40: startup date [Thu Jul 18 18:59:44 CST 2019]; root of context hierarchy
+2019-07-18 18:59:48.949 DEBUG 68988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 request handler methods found on class org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController: {public org.springframework.http.ResponseEntity org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)={[/error]}, public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)={[/error],produces=[text/html]}}
+2019-07-18 18:59:48.949  INFO 68988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-18 18:59:48.949  INFO 68988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-18 18:59:48.959 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Looking for URL mappings in application context: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74fe5c40: startup date [Thu Jul 18 18:59:44 CST 2019]; root of context hierarchy
+2019-07-18 18:59:48.959 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
+2019-07-18 18:59:48.959 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor': no URL paths identified
+2019-07-18 18:59:48.959 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalRequiredAnnotationProcessor': no URL paths identified
+2019-07-18 18:59:48.959 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalCommonAnnotationProcessor': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.event.internalEventListenerProcessor': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.event.internalEventListenerFactory': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'parkingLotApplication': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.AutoConfigurationPackages': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'propertySourcesPlaceholderConfigurer': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'websocketContainerCustomizer': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tomcatServletWebServerFactory': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletWebServerFactoryCustomizer': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tomcatServletWebServerFactoryCustomizer': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webServerFactoryCustomizerBeanPostProcessor': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'errorPageRegistrarBeanPostProcessor': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dispatcherServlet': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mainDispatcherServletPathProvider': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties': no URL paths identified
+2019-07-18 18:59:48.967 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dispatcherServletRegistration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'defaultValidator': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'methodValidationPostProcessor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'error': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'beanNameViewResolver': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'conventionErrorViewResolver': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'errorAttributes': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'basicErrorController': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'errorPageCustomizer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'preserveErrorControllerTargetClassPostProcessor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'faviconHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'faviconRequestHandler': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'requestMappingHandlerAdapter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'requestMappingHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcConversionService': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcValidator': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcPathMatcher': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcUrlPathHelper': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'viewControllerHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'beanNameHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'resourceHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcResourceUrlProvider': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'defaultServletHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcUriComponentsContributor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'httpRequestHandlerAdapter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'simpleControllerHandlerAdapter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'handlerExceptionResolver': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcViewResolver': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcHandlerMappingIntrospector': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'defaultViewResolver': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'viewResolver': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'welcomePageHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'requestContextFilter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'hiddenHttpMethodFilter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'httpPutFormContentFilter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration$AuditEventRepositoryConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'auditEventRepository': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'auditListener': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'auditEventsEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'beansEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'diskSpaceHealthIndicator': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'diskSpaceHealthIndicatorProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.mongo.MongoHealthIndicatorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.redis.RedisHealthIndicatorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jta-org.springframework.boot.autoconfigure.transaction.jta.JtaProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSource': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'hikariPoolDataSourceMetadataProvider': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSourceInitializerPostProcessor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dbHealthIndicator': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticsearchHealthIndicatorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'healthAggregator': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.health.status-org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'healthEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration$ServletWebHealthConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'healthEndpointWebExtension': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'createHealthStatusHttpMapper': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'healthWebEndpointResponseMapper': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletWebChildContextFactory': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'managementServletContext': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'conditionsReportEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'configurationPropertiesReportEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'endpointOperationParameterMapper': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'endpointCachingOperationInvokerAdvisor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mbeanExporter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'objectNamingStrategy': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mbeanServer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jmxAnnotationEndpointDiscoverer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jmxMBeanExporter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jmxIncludeExcludePropertyEndpointFilter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoints.jmx-org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration$WebEndpointServletConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletEndpointDiscoverer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webEndpointPathMapper': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'endpointMediaTypes': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webEndpointDiscoverer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'controllerEndpointDiscoverer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'pathMappedEndpoints': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webExposeExcludePropertyEndpointFilter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'controllerExposeExcludePropertyEndpointFilter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'environmentEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'environmentEndpointWebExtension': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoint.env-org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'openEntityManagerInViewInterceptor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionManager': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jpaVendorAdapter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'entityManagerFactoryBuilder': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'entityManagerFactory': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSourceInitializedPublisher': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayJpaDependencyConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration$FlywayInitializerJpaDependencyConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'flyway': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'flywayInitializer': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.flyway-org.springframework.boot.autoconfigure.flyway.FlywayProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'stringOrNumberMigrationVersionConverter': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'flywayDefaultDdlModeProvider': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.flyway.FlywayEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'flywayEndpoint': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'envInfoContributor': no URL paths identified
+2019-07-18 18:59:48.969 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'infoEndpoint': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'logFileWebEndpoint': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoint.logfile-org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'loggersEndpoint': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'heapDumpWebEndpoint': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dumpEndpoint': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration$MeterBindersConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'logbackMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'uptimeMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'processorMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'fileDescriptorMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration$JvmMeterBindersConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jvmGcMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jvmMemoryMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jvmThreadMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'classLoaderMetrics': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'micrometerClock': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'meterRegistryPostProcessor': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'propertiesMeterFilter': no URL paths identified
+2019-07-18 18:59:48.977 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'simpleMeterRegistry': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'simpleConfig': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'metricsEndpoint': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$HikariDataSourceMetricsConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'hikariDataSourceMetricsPostProcessor': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'standardJacksonObjectMapperBuilderCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonObjectMapperBuilder': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'parameterNamesModule': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonObjectMapper': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jsonComponentModule': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'stringHttpMessageConverter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.http.encoding-org.springframework.boot.autoconfigure.http.HttpEncodingProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mappingJackson2HttpMessageConverter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'messageConverters': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'restTemplateBuilder': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.web.client.RestTemplateMetricsAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'restTemplateTagConfigurer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'metricsRestTemplateCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'metricsWebClientUriTagFilter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webMvcTagsProvider': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webMvcMetricsFilter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tomcatMetrics': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'contextCapturingServletTomcatCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'scheduledTasksEndpoint': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration$ServletTraceFilterConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'httpTraceFilter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'traceRepository': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'httpExchangeTracer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.trace.http-org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'httpTraceEndpoint': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration$SpringMvcConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dispatcherServletMappingDescriptionProvider': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletMappingDescriptionProvider': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'filterMappingDescriptionProvider': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mappingsEndpoint': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$CglibAutoProxyConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.aop.config.internalAutoProxyCreator': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'persistenceExceptionTranslationPostProcessor': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'emBeanDefinitionRegistrarPostProcessor': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jpaMappingContext': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jpaContext': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.data.web.config.ProjectingArgumentResolverRegistrar': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'projectingArgumentResolverBeanPostProcessor': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.data.web.config.SpringDataWebConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'pageableResolver': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'sortResolver': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.data.web.config.SpringDataJacksonConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonGeoModule': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'pageableCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'sortCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'h2Console': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.h2.console-org.springframework.boot.autoconfigure.h2.H2ConsoleProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonCodecCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$JdbcTemplateConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jdbcTemplate': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$NamedParameterJdbcTemplateConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'namedParameterJdbcTemplate': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.transaction.config.internalTransactionAdvisor': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionAttributeSource': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionInterceptor': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.transaction.config.internalTransactionalEventListenerFactory': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionTemplate': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'platformTransactionManagerCustomizers': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tomcatWebServerFactoryCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'characterEncodingFilter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'localeCharsetMappingsCustomizer': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'multipartConfigElement': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'multipartResolver': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletEndpointRegistrar': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletExposeExcludePropertyEndpointFilter': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'webEndpointServletHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'controllerEndpointHandlerMapping': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$EnableSameManagementContextConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.orm.jpa.SharedEntityManagerCreator#0': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'autoConfigurationReport': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.context.ContextIdApplicationContextInitializer$ContextId': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springApplicationArguments': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springBootBanner': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springBootLoggingSystem': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'environment': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'systemProperties': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'systemEnvironment': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'messageSource': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'applicationEventMulticaster': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletContext': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'contextParameters': no URL paths identified
+2019-07-18 18:59:48.979 DEBUG 68988 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'contextAttributes': no URL paths identified
+2019-07-18 18:59:48.987  INFO 68988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-18 18:59:48.987  INFO 68988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-18 18:59:48.989 DEBUG 68988 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Looking for exception mappings: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74fe5c40: startup date [Thu Jul 18 18:59:44 CST 2019]; root of context hierarchy
+2019-07-18 18:59:49.332  INFO 68988 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-18 18:59:49.340  INFO 68988 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-18 18:59:49.342  INFO 68988 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-07-18 18:59:49.342  INFO 68988 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-18 18:59:49.382  INFO 68988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-18 18:59:49.382  INFO 68988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-07-18 18:59:49.382  INFO 68988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-07-18 18:59:49.382 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'Management Server' with lowest search precedence
+2019-07-18 18:59:49.392 DEBUG 68988 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Looking for resource handler mappings
+2019-07-18 18:59:49.392 DEBUG 68988 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/**/favicon.ico", locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@32a72c4]
+2019-07-18 18:59:49.392 DEBUG 68988 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/webjars/**", locations=[class path resource [META-INF/resources/webjars/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@15986dd5]
+2019-07-18 18:59:49.392 DEBUG 68988 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/**", locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]
+2019-07-18 18:59:49.412  INFO 68988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-18 18:59:49.420 DEBUG 68988 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'server.ports' with highest search precedence
+2019-07-18 18:59:49.422  INFO 68988 --- [main] c.t.parking_lot.ParkingLotApplication    : Started ParkingLotApplication in 4.888 seconds (JVM running for 5.349)
+2019-07-18 18:59:53.874 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /h2-console
+2019-07-18 18:59:53.874 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/h2-console]
+2019-07-18 18:59:53.875 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/h2-console] are [/**]
+2019-07-18 18:59:53.875 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/h2-console] are {}
+2019-07-18 18:59:53.876 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/h2-console] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 18:59:53.890 DEBUG 68988 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /
+2019-07-18 18:59:53.891 DEBUG 68988 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/]
+2019-07-18 18:59:53.891 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/] are [/**]
+2019-07-18 18:59:53.891 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/] are {}
+2019-07-18 18:59:53.891 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 18:59:53.930 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /stylesheet.css
+2019-07-18 18:59:53.930 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/stylesheet.css]
+2019-07-18 18:59:53.930 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/stylesheet.css] are [/**]
+2019-07-18 18:59:53.930 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/stylesheet.css] are {}
+2019-07-18 18:59:53.930 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/stylesheet.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 18:59:53.948 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /login.jsp
+2019-07-18 18:59:53.950 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/login.jsp]
+2019-07-18 18:59:53.950 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/login.jsp] are [/**]
+2019-07-18 18:59:53.950 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/login.jsp] are {}
+2019-07-18 18:59:53.950 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/login.jsp] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 18:59:53.976 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /background.gif
+2019-07-18 18:59:53.976 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/background.gif]
+2019-07-18 18:59:53.976 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/background.gif] are [/**]
+2019-07-18 18:59:53.976 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/background.gif] are {}
+2019-07-18 18:59:53.976 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/background.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 18:59:53.995 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing servlet 'dispatcherServlet'
+2019-07-18 18:59:53.996  INFO 68988 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-18 18:59:53.996  INFO 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-18 18:59:53.996 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Using MultipartResolver [org.springframework.web.multipart.support.StandardServletMultipartResolver@93501be]
+2019-07-18 18:59:54.000 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@184977ee]
+2019-07-18 18:59:54.007 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@e3b5f2f]
+2019-07-18 18:59:54.013 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@489093d2]
+2019-07-18 18:59:54.020 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@3ead63ef]
+2019-07-18 18:59:54.021 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Published WebApplicationContext of servlet 'dispatcherServlet' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet]
+2019-07-18 18:59:54.021  INFO 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-07-18 18:59:54.021 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Servlet 'dispatcherServlet' configured successfully
+2019-07-18 18:59:54.021 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/favicon.ico] are [/**/favicon.ico]
+2019-07-18 18:59:54.022 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/favicon.ico] are {}
+2019-07-18 18:59:54.022 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/favicon.ico] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@32a72c4]]] and 1 interceptor
+2019-07-18 18:59:54.024 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/favicon.ico]
+2019-07-18 18:59:54.025 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/favicon.ico] are [/**/favicon.ico]
+2019-07-18 18:59:54.026 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/favicon.ico] are {}
+2019-07-18 18:59:54.026 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/favicon.ico] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@32a72c4]]] and 1 interceptor
+2019-07-18 18:59:54.026 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/favicon.ico] is: -1
+2019-07-18 18:59:54.030 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-07-18 18:59:54.030 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-07-18 19:00:04.811 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /login.do
+2019-07-18 19:00:04.812 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/login.do]
+2019-07-18 19:00:04.812 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/login.do] are [/**]
+2019-07-18 19:00:04.812 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/login.do] are {}
+2019-07-18 19:00:04.812 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/login.do] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:04.833 DEBUG 68988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /stylesheet.css
+2019-07-18 19:00:04.834 DEBUG 68988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/stylesheet.css]
+2019-07-18 19:00:04.835 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/stylesheet.css] are [/**]
+2019-07-18 19:00:04.836 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/stylesheet.css] are {}
+2019-07-18 19:00:04.836 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/stylesheet.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:04.845 DEBUG 68988 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /header.jsp
+2019-07-18 19:00:04.845 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tables.do
+2019-07-18 19:00:04.845 DEBUG 68988 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/header.jsp]
+2019-07-18 19:00:04.845 DEBUG 68988 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/header.jsp] are [/**]
+2019-07-18 19:00:04.845 DEBUG 68988 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/header.jsp] are {}
+2019-07-18 19:00:04.845 DEBUG 68988 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/header.jsp] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:04.846 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tables.do]
+2019-07-18 19:00:04.846 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tables.do] are [/**]
+2019-07-18 19:00:04.846 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tables.do] are {}
+2019-07-18 19:00:04.846 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tables.do] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:04.860 DEBUG 68988 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /query.jsp
+2019-07-18 19:00:04.860 DEBUG 68988 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/query.jsp]
+2019-07-18 19:00:04.860 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/query.jsp] are [/**]
+2019-07-18 19:00:04.860 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/query.jsp] are {}
+2019-07-18 19:00:04.860 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/query.jsp] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:04.891 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /help.jsp
+2019-07-18 19:00:04.892 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/help.jsp]
+2019-07-18 19:00:04.892 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/help.jsp] are [/**]
+2019-07-18 19:00:04.892 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/help.jsp] are {}
+2019-07-18 19:00:04.892 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/help.jsp] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:04.994 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_disconnect.gif
+2019-07-18 19:00:04.994 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_disconnect.gif]
+2019-07-18 19:00:04.994 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_disconnect.gif] are [/**]
+2019-07-18 19:00:04.994 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_disconnect.gif] are {}
+2019-07-18 19:00:04.994 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_disconnect.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.045 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_line.gif
+2019-07-18 19:00:05.045 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_line.gif]
+2019-07-18 19:00:05.045 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_line.gif] are [/**]
+2019-07-18 19:00:05.046 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_line.gif] are {}
+2019-07-18 19:00:05.046 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_line.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.061 DEBUG 68988 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_refresh.gif
+2019-07-18 19:00:05.062 DEBUG 68988 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_refresh.gif]
+2019-07-18 19:00:05.062 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_refresh.gif] are [/**]
+2019-07-18 19:00:05.062 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_refresh.gif] are {}
+2019-07-18 19:00:05.062 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_refresh.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.079 DEBUG 68988 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_rollback.gif
+2019-07-18 19:00:05.079 DEBUG 68988 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_rollback.gif]
+2019-07-18 19:00:05.079 DEBUG 68988 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_rollback.gif] are [/**]
+2019-07-18 19:00:05.079 DEBUG 68988 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_rollback.gif] are {}
+2019-07-18 19:00:05.079 DEBUG 68988 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_rollback.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.161 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_commit.gif
+2019-07-18 19:00:05.161 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_commit.gif]
+2019-07-18 19:00:05.161 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_commit.gif] are [/**]
+2019-07-18 19:00:05.161 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_commit.gif] are {}
+2019-07-18 19:00:05.163 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_commit.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.172 DEBUG 68988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_help.gif
+2019-07-18 19:00:05.173 DEBUG 68988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_help.gif]
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_help.gif] are [/**]
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_help.gif] are {}
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_history.gif
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_history.gif]
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_history.gif] are [/**]
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_history.gif] are {}
+2019-07-18 19:00:05.174 DEBUG 68988 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_history.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.178 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_run.gif
+2019-07-18 19:00:05.178 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_run.gif]
+2019-07-18 19:00:05.178 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_run.gif] are [/**]
+2019-07-18 19:00:05.178 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_run.gif] are {}
+2019-07-18 19:00:05.179 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_run.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.180 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_help.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.185 DEBUG 68988 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_run_selected.gif
+2019-07-18 19:00:05.185 DEBUG 68988 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_run_selected.gif]
+2019-07-18 19:00:05.185 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_run_selected.gif] are [/**]
+2019-07-18 19:00:05.185 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_run_selected.gif] are {}
+2019-07-18 19:00:05.185 DEBUG 68988 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_run_selected.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.187 DEBUG 68988 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree.js
+2019-07-18 19:00:05.187 DEBUG 68988 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree.js]
+2019-07-18 19:00:05.187 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree.js] are [/**]
+2019-07-18 19:00:05.187 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree.js] are {}
+2019-07-18 19:00:05.187 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.188 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /icon_stop.gif
+2019-07-18 19:00:05.188 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/icon_stop.gif]
+2019-07-18 19:00:05.188 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/icon_stop.gif] are [/**]
+2019-07-18 19:00:05.188 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/icon_stop.gif] are {}
+2019-07-18 19:00:05.188 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/icon_stop.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.210 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_minus.gif
+2019-07-18 19:00:05.210 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_minus.gif]
+2019-07-18 19:00:05.210 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_minus.gif] are [/**]
+2019-07-18 19:00:05.210 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_minus.gif] are {}
+2019-07-18 19:00:05.210 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_minus.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.215 DEBUG 68988 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_plus.gif
+2019-07-18 19:00:05.215 DEBUG 68988 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_plus.gif]
+2019-07-18 19:00:05.215 DEBUG 68988 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_plus.gif] are [/**]
+2019-07-18 19:00:05.216 DEBUG 68988 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_plus.gif] are {}
+2019-07-18 19:00:05.216 DEBUG 68988 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_plus.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_database.gif
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_database.gif]
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_column.gif
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_column.gif]
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_column.gif] are [/**]
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_column.gif] are {}
+2019-07-18 19:00:05.218 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_column.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.219 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_database.gif] are [/**]
+2019-07-18 19:00:05.219 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_database.gif] are {}
+2019-07-18 19:00:05.219 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_database.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.222 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_empty.gif
+2019-07-18 19:00:05.224 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_table.gif
+2019-07-18 19:00:05.224 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_table.gif]
+2019-07-18 19:00:05.224 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_table.gif] are [/**]
+2019-07-18 19:00:05.224 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_table.gif] are {}
+2019-07-18 19:00:05.224 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_table.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.228 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_empty.gif]
+2019-07-18 19:00:05.228 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_empty.gif] are [/**]
+2019-07-18 19:00:05.228 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_empty.gif] are {}
+2019-07-18 19:00:05.228 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_empty.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_users.gif
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_type.gif
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_type.gif]
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_type.gif] are [/**]
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_type.gif] are {}
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_type.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_info.gif
+2019-07-18 19:00:05.240 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_info.gif]
+2019-07-18 19:00:05.241 DEBUG 68988 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_users.gif]
+2019-07-18 19:00:05.241 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_users.gif] are [/**]
+2019-07-18 19:00:05.241 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_users.gif] are {}
+2019-07-18 19:00:05.241 DEBUG 68988 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_users.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.242 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_folder.gif
+2019-07-18 19:00:05.242 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_folder.gif]
+2019-07-18 19:00:05.242 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_folder.gif] are [/**]
+2019-07-18 19:00:05.242 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_folder.gif] are {}
+2019-07-18 19:00:05.242 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_folder.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.241 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_info.gif] are [/**]
+2019-07-18 19:00:05.244 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_info.gif] are {}
+2019-07-18 19:00:05.245 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_info.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.247 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_index_az.gif
+2019-07-18 19:00:05.247 DEBUG 68988 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_index_az.gif]
+2019-07-18 19:00:05.247 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_index_az.gif] are [/**]
+2019-07-18 19:00:05.247 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_index_az.gif] are {}
+2019-07-18 19:00:05.247 DEBUG 68988 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_index_az.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.249 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_index.gif
+2019-07-18 19:00:05.249 DEBUG 68988 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_index.gif]
+2019-07-18 19:00:05.250 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_index.gif] are [/**]
+2019-07-18 19:00:05.250 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_index.gif] are {}
+2019-07-18 19:00:05.250 DEBUG 68988 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_index.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:05.249 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /tree_user.gif
+2019-07-18 19:00:05.250 DEBUG 68988 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/tree_user.gif]
+2019-07-18 19:00:05.251 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/tree_user.gif] are [/**]
+2019-07-18 19:00:05.251 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/tree_user.gif] are {}
+2019-07-18 19:00:05.251 DEBUG 68988 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/tree_user.gif] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:07.224 DEBUG 68988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /query.do
+2019-07-18 19:00:07.224 DEBUG 68988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/query.do]
+2019-07-18 19:00:07.224 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/query.do] are [/**]
+2019-07-18 19:00:07.224 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/query.do] are {}
+2019-07-18 19:00:07.224 DEBUG 68988 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/query.do] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
+2019-07-18 19:00:07.246 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /table.js
+2019-07-18 19:00:07.246 DEBUG 68988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/table.js]
+2019-07-18 19:00:07.246 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/table.js] are [/**]
+2019-07-18 19:00:07.246 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/table.js] are {}
+2019-07-18 19:00:07.246 DEBUG 68988 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/table.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@678a9516]]] and 1 interceptor
