@@ -13,6 +13,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.List;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -33,6 +36,15 @@ public class ParkingLotControllerTest {
         String objectJson = new JSONObject(parkingLot).toString();
         this.mockMvc.perform(post("/parkingLots").contentType(MediaType.APPLICATION_JSON_UTF8).
                 content(objectJson)).andExpect(status().isCreated());
+    }
+    @Test
+    public void should_return_200_when_delete_a_parking_lot() throws  Exception {
+
+        List<ParkingLot> parkingLots = parkingLotService.findAll();
+        int size = parkingLots.size();
+        String uuid = parkingLots.get(0).getId();
+        this.mockMvc.perform(delete("/parkingLots/"+uuid)).andExpect(status().isOk());
+        Assertions.assertEquals(size-1,parkingLotService.findAll().size());
     }
 
 

@@ -5,6 +5,8 @@ import com.thoughtworks.parking_lot.repository.ParkingLotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ParkingLotService {
 
@@ -20,5 +22,18 @@ public class ParkingLotService {
             return  false;
         }
     }
+    public List<ParkingLot> findAll(){
+        return parkingLotRepository.findAll();
+    }
 
+
+    public boolean deleteById(String id) {
+        try {
+            parkingLotRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
