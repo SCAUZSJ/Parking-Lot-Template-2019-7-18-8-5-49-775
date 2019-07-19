@@ -84,7 +84,7 @@ public class ParkingLotControllerTest {
         parkingLot.setCapacity(1000);
         String objectJson = new JSONObject(parkingLot).toString();
         //when
-        String content = this.mockMvc.perform(put("/parkingLots").contentType(MediaType.APPLICATION_JSON_UTF8).content(objectJson)).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+        String content = this.mockMvc.perform(put("/parkingLots/"+parkingLot.getId()).contentType(MediaType.APPLICATION_JSON_UTF8).content(objectJson)).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         JSONObject json = new JSONObject(content);
         //then
         Assertions.assertEquals(1000,json.get("capacity"));

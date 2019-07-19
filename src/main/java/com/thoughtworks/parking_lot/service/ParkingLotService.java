@@ -46,7 +46,8 @@ public class ParkingLotService {
         return parkingLotRepository.findById(id).get();
     }
 
-    public ParkingLot update(ParkingLot parkingLot) {
+    public ParkingLot update(String id, ParkingLot parkingLot) {
+        parkingLot.setId(id);
         return parkingLotRepository.saveAndFlush(parkingLot);
     }
 }
