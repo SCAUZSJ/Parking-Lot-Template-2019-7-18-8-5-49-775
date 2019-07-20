@@ -8,7 +8,4 @@ import org.springframework.data.repository.query.Param;
 
 public interface ParkingLotRepository extends JpaRepository<ParkingLot, String> {
 
-//    @Modifying
-//    @Query("delete from parkinglot where id = :id")
-//    void deleteByUUId(@Param("id") String id);
 }
