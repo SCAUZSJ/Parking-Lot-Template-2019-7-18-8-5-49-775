@@ -20,11 +20,13 @@ public class ParkingLotController {
         parkingLotService.add(parkingLot);
         return  ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable String id){
         parkingLotService.deleteById(id);
         return  ResponseEntity.status(HttpStatus.OK).build();
     }
+
     @GetMapping(params = {"page","pageSize"})
     public ResponseEntity findAll(@RequestParam("page")int page,@RequestParam("pageSize")int pageSize){
         return ResponseEntity.ok().body(parkingLotService.findAllByPage(page,pageSize));
@@ -34,6 +36,7 @@ public class ParkingLotController {
     public ResponseEntity findById(@PathVariable String id){
         return ResponseEntity.ok().body(parkingLotService.findById(id));
     }
+
     @PutMapping("/{id}")
     public ResponseEntity updateById(@PathVariable String id, @RequestBody ParkingLot parkingLot){
         return ResponseEntity.ok().body(parkingLotService.update(id,parkingLot));

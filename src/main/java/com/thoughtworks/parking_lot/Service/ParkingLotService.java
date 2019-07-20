@@ -17,15 +17,16 @@ public class ParkingLotService {
     @Autowired
     private ParkingLotRepository parkingLotRepository;
 
-    private final String SERVER_NAME = "[ParkingLot]";
+    private final String LOCATION = "["+this.getClass()+"]";
 
-    public void add(ParkingLot parkingLot){
+    public void add(ParkingLot parkingLot) throws RuntimeException{
+
         try {
             parkingLotRepository.saveAndFlush(parkingLot);
 
         } catch (Exception e) {
             e.printStackTrace();
-            throw new DBException(this.SERVER_NAME+ DBErrorMsg.DB_INSERT_ERROR.getMessage());
+            throw new DBException(this.LOCATION+ DBErrorMsg.DB_INSERT_ERROR.getMessage());
         }
     }
     public Page<ParkingLot> findAllByPage(int page,int pageSize){
@@ -36,26 +37,26 @@ public class ParkingLotService {
     }
 
 
-    public void deleteById(String id) {
+    public void deleteById(String id) throws RuntimeException{
         try {
             parkingLotRepository.deleteById(id);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new DBException(this.SERVER_NAME+ DBErrorMsg.DB_INSERT_ERROR.getMessage());
+            throw new DBException(this.LOCATION+ DBErrorMsg.DB_INSERT_ERROR.getMessage());
         }
     }
     public ParkingLot findById(String id) {
         return parkingLotRepository.findById(id).get();
     }
 
-    public ParkingLot update(String id, ParkingLot parkingLot) {
+    public ParkingLot update(String id, ParkingLot parkingLot) throws RuntimeException{
         parkingLot.setId(id);
         ParkingLot parkingLotNew = null;
         try {
             parkingLotNew = parkingLotRepository.saveAndFlush(parkingLot);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new DBException(this.SERVER_NAME+DBErrorMsg.DB_UPDATE_ERROR.getMessage());
+            throw new DBException(this.LOCATION+DBErrorMsg.DB_UPDATE_ERROR.getMessage());
         }
         return parkingLotNew;
     }

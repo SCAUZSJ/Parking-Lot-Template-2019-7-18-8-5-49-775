@@ -38,12 +38,9 @@ public class ParkingOrderControllerTest {
         Car car = new Car("C001");
         ParkingOrder parkingOrder = new ParkingOrder("停车场1",car.getCarNum());
         String objectJson = new JSONObject(parkingOrder).toString();
-        //when+then
-//        this.mockMvc.perform(post("/parkingOrders").contentType(MediaType.APPLICATION_JSON_UTF8).
-//                content(objectJson)).andExpect(status().isCreated());
-        String returnContent = this.mockMvc.perform(post("/parkingOrders").contentType(MediaType.APPLICATION_JSON_UTF8).
-                content(objectJson)).andReturn().getResponse().getContentAsString();
-        Assertions.assertEquals("aa",returnContent);
+//        when+then
+        this.mockMvc.perform(post("/parkingOrders").contentType(MediaType.APPLICATION_JSON_UTF8).
+                content(objectJson)).andExpect(status().isCreated());
     }
     @Test
     public void should_update_order_status_when_fetch_a_car() throws  Exception {
@@ -55,13 +52,11 @@ public class ParkingOrderControllerTest {
         String id = parkingOrderRepository.saveAndFlush(parkingOrder).getOrderId();
         //when
         ParkingOrder parkingOrderNew = parkingOrderRepository.findById(id).get();
-//        Assertions.assertEquals("d",parkingOrderNew.getStartTime());
         String objectJson = new JSONObject(parkingOrderNew).toString();
-
         this.mockMvc.perform(put("/parkingOrders/"+parkingOrderNew.getOrderId()).contentType(MediaType.APPLICATION_JSON_UTF8).
                 content(objectJson)).andExpect(status().isOk());
+        //then
         Assertions.assertEquals("OFF",parkingOrderRepository.findById(id).get().getStatus());
-        //when+then
 
     }
 

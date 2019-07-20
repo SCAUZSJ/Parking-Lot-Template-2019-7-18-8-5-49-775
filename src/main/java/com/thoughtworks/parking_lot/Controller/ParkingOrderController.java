@@ -19,6 +19,7 @@ public class ParkingOrderController {
         parkingOrderService.add(parkingOrder);
         return  ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
     @PutMapping("/{id}")
     public ResponseEntity updateById(@PathVariable String id, @RequestBody ParkingOrder parkingLot){
         return ResponseEntity.ok().body(parkingOrderService.fetchCar(id,parkingLot));
