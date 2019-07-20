@@ -1,9 +1,9 @@
 package com.thoughtworks.parking_lot.controllerTest;
 
-import com.thoughtworks.parking_lot.entity.Car;
-import com.thoughtworks.parking_lot.entity.ParkingOrder;
-import com.thoughtworks.parking_lot.repository.ParkingOrderRepository;
-import com.thoughtworks.parking_lot.service.ParkingOrderService;
+import com.thoughtworks.parking_lot.Entity.Car;
+import com.thoughtworks.parking_lot.Entity.ParkingOrder;
+import com.thoughtworks.parking_lot.Repository.ParkingOrderRepository;
+import com.thoughtworks.parking_lot.Service.ParkingOrderService;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -39,8 +39,11 @@ public class ParkingOrderControllerTest {
         ParkingOrder parkingOrder = new ParkingOrder("停车场1",car.getCarNum());
         String objectJson = new JSONObject(parkingOrder).toString();
         //when+then
-        this.mockMvc.perform(post("/parkingOrders").contentType(MediaType.APPLICATION_JSON_UTF8).
-                content(objectJson)).andExpect(status().isCreated());
+//        this.mockMvc.perform(post("/parkingOrders").contentType(MediaType.APPLICATION_JSON_UTF8).
+//                content(objectJson)).andExpect(status().isCreated());
+        String returnContent = this.mockMvc.perform(post("/parkingOrders").contentType(MediaType.APPLICATION_JSON_UTF8).
+                content(objectJson)).andReturn().getResponse().getContentAsString();
+        Assertions.assertEquals("aa",returnContent);
     }
     @Test
     public void should_update_order_status_when_fetch_a_car() throws  Exception {

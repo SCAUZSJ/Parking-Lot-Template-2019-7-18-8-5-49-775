@@ -1,9 +1,8 @@
-package com.thoughtworks.parking_lot.entity;
+package com.thoughtworks.parking_lot.Entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "parkinglot")

@@ -1,10 +1,9 @@
 package com.thoughtworks.parking_lot.controllerTest;
 
-import com.thoughtworks.parking_lot.entity.ParkingLot;
-import com.thoughtworks.parking_lot.repository.ParkingLotRepository;
-import com.thoughtworks.parking_lot.service.ParkingLotService;
+import com.thoughtworks.parking_lot.Entity.ParkingLot;
+import com.thoughtworks.parking_lot.Repository.ParkingLotRepository;
+import com.thoughtworks.parking_lot.Service.ParkingLotService;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -14,7 +13,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;

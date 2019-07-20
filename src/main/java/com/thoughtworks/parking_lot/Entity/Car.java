@@ -1,7 +1,4 @@
-package com.thoughtworks.parking_lot.entity;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
+package com.thoughtworks.parking_lot.Entity;
 
 
 public class Car {

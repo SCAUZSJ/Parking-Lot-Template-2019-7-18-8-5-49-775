@@ -1,4 +1,4 @@
-package com.thoughtworks.parking_lot.entity;
+package com.thoughtworks.parking_lot.Entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
