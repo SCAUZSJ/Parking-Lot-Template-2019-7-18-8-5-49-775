@@ -6,19 +6,19 @@ import javax.persistence.Table;
 
 public class Car {
 
-    private Long carNum;
+    private String carNum;
 
     public Car(){}
 
-    public Car(Long carNum) {
+    public Car(String carNum) {
         this.carNum = carNum;
     }
 
-    public Long getCarNum() {
+    public String getCarNum() {
         return carNum;
     }
 
-    public void setCarNum(Long carNum) {
+    public void setCarNum(String carNum) {
         this.carNum = carNum;
     }
 }

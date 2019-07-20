@@ -14,7 +14,7 @@ public class ParkingOrder {
     @GenericGenerator(name = "uuid", strategy = "uuid")
     private String orderId;
 
-    @Column(name = "parking_lot_name",nullable = false)
+    @Column(name = "parking_lot_name")
     private String parkingLotName;
 
     @Column(name = "car_num",nullable = false)

@@ -3,6 +3,7 @@ package com.thoughtworks.parking_lot.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "parkinglot")
@@ -27,8 +28,6 @@ public class ParkingLot {
         this.capacity = capacity;
         this.location = location;
     }
-
-
 
     public String getName() {
         return name;
@@ -61,4 +60,5 @@ public class ParkingLot {
     public void setId(String id) {
         this.id = id;
     }
+
 }
