@@ -42,7 +42,7 @@ public class ParkingLotController {
         return ResponseEntity.ok().body(parkingLotService.findById(id));
     }
     @PutMapping("/{id}")
-    public ResponseEntity findById(@PathVariable String id, @RequestBody ParkingLot parkingLot){
+    public ResponseEntity updateById(@PathVariable String id, @RequestBody ParkingLot parkingLot){
         return ResponseEntity.ok().body(parkingLotService.update(id,parkingLot));
     }
 

@@ -23,4 +23,11 @@ public class ParkingOrderService {
             return  false;
         }
     }
+
+    public ParkingOrder fetchCar(String id, ParkingOrder parkingOrder) {
+        parkingOrder.setOrderId(id);
+        parkingOrder.setEndTime(new Timestamp(System.currentTimeMillis()));
+        parkingOrder.setStatus("OFF");
+        return parkingOrderRepository.saveAndFlush(parkingOrder);
+    }
 }

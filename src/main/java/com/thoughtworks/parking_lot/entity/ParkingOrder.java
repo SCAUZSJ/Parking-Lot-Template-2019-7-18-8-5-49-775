@@ -60,16 +60,16 @@ public class ParkingOrder {
         this.carNum = carNum;
     }
 
-    public Timestamp getStartTime() {
-        return startTime;
+    public long getStartTime() {
+        return startTime.getTime();
     }
 
     public void setStartTime(Timestamp startTime) {
         this.startTime = startTime;
     }
 
-    public Timestamp getEndTime() {
-        return endTime;
+    public long getEndTime() {
+        return endTime.getTime();
     }
 
     public void setEndTime(Timestamp endTime) {
