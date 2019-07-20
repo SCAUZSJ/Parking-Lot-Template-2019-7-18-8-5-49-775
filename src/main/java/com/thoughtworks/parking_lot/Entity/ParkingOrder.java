@@ -36,6 +36,13 @@ public class ParkingOrder {
         this.carNum = carNum;
     }
 
+    public ParkingOrder(String parkingLotName, String carNum, Timestamp startTime, String status) {
+        this.parkingLotName = parkingLotName;
+        this.carNum = carNum;
+        this.startTime = startTime;
+        this.status = status;
+    }
+
     public String getOrderId() {
         return orderId;
     }

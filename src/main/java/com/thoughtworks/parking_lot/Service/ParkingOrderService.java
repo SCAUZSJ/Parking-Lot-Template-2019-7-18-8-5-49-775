@@ -28,6 +28,7 @@ public class ParkingOrderService {
         List<ParkingOrder> parkingOrders = parkingOrderRepository.findByParkingLotNameAndStatus(parkingOrder.getParkingLotName(),"ON");
         ParkingLot parkingLot = parkingLotRepository.findByName(parkingOrder.getParkingLotName());
         if(parkingOrders.size()>=parkingLot.getCapacity()){
+            System.out.println("进入");
             throw new BusinessException(this.LOCATION+BusinessErrorMsg.PARKING_LOT_FULL.getMessage());
         }
         try {
