@@ -1,11 +1,14 @@
 package com.thoughtworks.parking_lot.controllerTest;
 
 import com.thoughtworks.parking_lot.entity.ParkingLot;
+import com.thoughtworks.parking_lot.repository.ParkingLotRepository;
 import com.thoughtworks.parking_lot.service.ParkingLotService;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +31,25 @@ public class ParkingLotControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
     @Autowired
     private ParkingLotService parkingLotService;
+    @Autowired
+    private ParkingLotRepository parkingLotRepository;
+
+    @BeforeEach
+    public void initData(){
+        //初始化20条测试数据
+        for(int i=0;i<20;i++){
+            parkingLotRepository.save(new ParkingLot("停车场"+i,100+i*10,"地点"+i));
+        }
+    }
+    @AfterEach
+    public void clearData(){
+        //清空被影响的测试数据
+        parkingLotRepository.deleteAll();
+    }
+
+
     @Test
     public void should_return_201_when_add_a_parking_lot() throws  Exception {
         //Given
